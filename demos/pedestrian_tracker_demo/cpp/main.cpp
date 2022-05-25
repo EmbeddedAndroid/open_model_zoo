@@ -290,6 +290,8 @@ int main(int argc, char** argv) {
 
             videoWriter.write(frame);
             if (should_show) {
+		cv::namedWindow("GPU Accelerated OpenVino Pedestrian Tracker", cv::WND_PROP_FULLSCREEN);
+		cv::setWindowProperty("GPU Accelerated OpenVino Pedestrian Tracker", cv::WND_PROP_FULLSCREEN, cv::WINDOW_FULLSCREEN);
                 cv::imshow("GPU Accelerated OpenVino Pedestrian Tracker", frame);
                 char k = cv::waitKey(delay);
                 if (k == 27)
