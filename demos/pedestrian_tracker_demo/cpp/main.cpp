@@ -290,7 +290,7 @@ int main(int argc, char** argv) {
 
             videoWriter.write(frame);
             if (should_show) {
-                cv::imshow("dbg", frame);
+                cv::imshow("GPU Accelerated OpenVino Pedestrian Tracker", frame);
                 char k = cv::waitKey(delay);
                 if (k == 27)
                     break;
